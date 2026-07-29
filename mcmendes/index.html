@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="O Manual Que Faltava Para O Seu Cérebro - Neurociência prática para mulheres que buscam foco, energia sustentável e paz mental. Por apenas R$ 1,99.">
+    <meta name="keywords" content="neurociência, foco, ansiedade, bem-estar feminino, produtividade, cérebro">
+    <meta property="og:title" content="O Manual Que Faltava Para O Seu Cérebro - M.C. Mendes">
+    <meta property="og:description" content="Descubra neurociência prática para transformar sua vida. 500+ mulheres já mudaram. 4.9★ avaliação.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcmendes.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="O Manual Que Faltava Para O Seu Cérebro">
+    <meta name="twitter:description" content="Neurociência prática para mulheres. Transforme sua vida. R$ 1,99 de lançamento.">
+
     <title>O Manual Que Faltava Para O Seu Cérebro - M.C. Mendes</title>
     <style>
         * {
@@ -846,7 +857,80 @@
                 padding: 1.5rem 0 !important;
             }
         }
+    
+        /* STICKY CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        .sticky-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(166, 139, 91, 0.4);
+        }
+
+        .sticky-cta.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(200px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                bottom: 10px;
+                right: 10px;
+                padding: 0.8rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+    
+        .faq-toggle:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-toggle::after {
+            content: '▼';
+            float: right;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active::after {
+            transform: rotate(180deg);
+        }
+
     </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Substituir XXXXXXXXXX por seu GA ID
+    </script>
+
 </head>
 <body>
     <!-- HEADER -->
@@ -869,6 +953,28 @@
                 
                 <div class="promise">Você não é quebrada.<br>Seu cérebro só precisa do manual</div>
                 <div class="offer">Preço de Lançamento (por tempo limitado) - apenas <strong>R$ 1,99</strong></div>
+    <script>
+        function formatCountdown() {
+            const launchEnd = new Date('2026-08-05T23:59:59').getTime();
+            const now = new Date().getTime();
+            const distance = launchEnd - now;
+            
+            if (distance > 0) {
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const countdownEl = document.getElementById('countdown');
+                if (countdownEl) {
+                    countdownEl.textContent = hours + 'h ' + minutes + 'm';
+                }
+            }
+        }
+        formatCountdown();
+        setInterval(formatCountdown, 60000);
+    </script>
+    <div style="text-align: center; margin-top: 1rem; padding: 1rem; background: rgba(255,0,0,0.05); border-radius: 8px; color: #d32f2f; font-weight: bold;">
+        ⏰ Preço de Lançamento termina em: <span id="countdown">48h 00m</span>
+    </div>
+
                 <a href="https://a.co/d/0aTfUKs4" class="btn cta-ab" data-variant="a" target="_blank">🚀 COMEÇAR AGORA - R$ 1,99</a>
             </div>
             <div class="hero-image fade-in">
@@ -1005,6 +1111,120 @@
         <a href="https://a.co/d/0aTfUKs4" class="btn cta-ab" data-variant="c" target="_blank">✨ SIM, QUERO MUDAR - R$ 1,99</a>
     </section>
 
+
+
+    <!-- LEAD MAGNET SECTION -->
+    <section style="background: linear-gradient(135deg, #051D2E 0%, #0A3344 100%); padding: 3rem 1rem; text-align: center; color: white;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">📖 Ganhe o Guia Gratuito</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">5 Neurotruques Essenciais para Começar Hoje</p>
+            
+            <p style="margin-bottom: 2rem; font-size: 0.95rem; opacity: 0.8;">Não precisa comprar agora. Comece com esses 5 neurotruques que você pode usar imediatamente para melhorar seu foco e ansiedade.</p>
+            
+            <form id="leadForm" style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: 0 auto;">
+                <input type="text" placeholder="Seu Nome" required style="padding: 0.8rem; border: none; border-radius: 6px; font-size: 1rem;">
+                <input type="email" placeholder="Seu Email" required style="padding: 0.8rem; border: none; border-radius: 6px; font-size: 1rem;">
+                <button type="submit" style="padding: 1rem; background: #A68B5B; color: #051D2E; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 1rem;">
+                    ✨ RECEBER GUIA GRATUITO
+                </button>
+            </form>
+            
+            <p style="margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.7;">Sem spam. Você receberá apenas conteúdo útil sobre neurociência prática.</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Track conversion
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    value: 0,
+                    currency: 'BRL',
+                    content_name: 'Free Guide'
+                });
+            }
+            
+            // Simular envio para email service (Mailchimp, ConvertKit, etc)
+            console.log('Lead capturado:', {name, email});
+            alert('Obrigado! Verifique seu email para o guia gratuito.');
+            this.reset();
+        });
+    </script>
+
+    <!-- FAQ SECTION -->
+    <section style="background: white; padding: 3rem 1rem;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #051D2E; font-size: 2rem; margin-bottom: 2rem;">❓ Dúvidas Frequentes</h2>
+            
+            <div style="display: grid; gap: 1rem;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        ⏱️ Quanto tempo leva para ver resultados?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>A maioria das pessoas relata noticiar mudanças na concentração e na qualidade do sono em <strong>3-7 dias</strong>. Os resultados mais profundos aparecem após <strong>21-30 dias</strong> de prática consistente dos neurotruques.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        👥 É realmente apenas para mulheres?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>O manual é <strong>otimizado para mulheres</strong>, considerando o ciclo hormonal e diferenças neurofisiológicas. Homens também podem se beneficiar, mas o conteúdo foi desenvolvido especificamente para o cérebro feminino.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        💼 Posso usar em contextos profissionais?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>Com certeza! Os neurotruques são perfeitamente <strong>aplicáveis em reuniões, apresentações, gestão de tarefas</strong> e qualquer contexto que exija foco e controle emocional. Muitas profissionais já os usam no dia a dia.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        🔄 Tem garantia de reembolso?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>Sim! Se em <strong>7 dias</strong> você não se sentir satisfeita, devolvemos 100% do seu dinheiro, sem perguntas. A satisfação é a nossa prioridade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'SEU_PIXEL_ID'); // Substituir SEU_PIXEL_ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-XXXXXXXXXX'); // Substituir XXXXXXXXXX por seu Google Ads ID
+    </script>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
@@ -1058,10 +1278,193 @@
         });
     </script>
 
+
+
+    <!-- LEAD MAGNET SECTION -->
+    <section style="background: linear-gradient(135deg, #051D2E 0%, #0A3344 100%); padding: 3rem 1rem; text-align: center; color: white;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">📖 Ganhe o Guia Gratuito</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">5 Neurotruques Essenciais para Começar Hoje</p>
+            
+            <p style="margin-bottom: 2rem; font-size: 0.95rem; opacity: 0.8;">Não precisa comprar agora. Comece com esses 5 neurotruques que você pode usar imediatamente para melhorar seu foco e ansiedade.</p>
+            
+            <form id="leadForm" style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: 0 auto;">
+                <input type="text" placeholder="Seu Nome" required style="padding: 0.8rem; border: none; border-radius: 6px; font-size: 1rem;">
+                <input type="email" placeholder="Seu Email" required style="padding: 0.8rem; border: none; border-radius: 6px; font-size: 1rem;">
+                <button type="submit" style="padding: 1rem; background: #A68B5B; color: #051D2E; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 1rem;">
+                    ✨ RECEBER GUIA GRATUITO
+                </button>
+            </form>
+            
+            <p style="margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.7;">Sem spam. Você receberá apenas conteúdo útil sobre neurociência prática.</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Track conversion
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    value: 0,
+                    currency: 'BRL',
+                    content_name: 'Free Guide'
+                });
+            }
+            
+            // Simular envio para email service (Mailchimp, ConvertKit, etc)
+            console.log('Lead capturado:', {name, email});
+            alert('Obrigado! Verifique seu email para o guia gratuito.');
+            this.reset();
+        });
+    </script>
+
+    <!-- FAQ SECTION -->
+    <section style="background: white; padding: 3rem 1rem;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #051D2E; font-size: 2rem; margin-bottom: 2rem;">❓ Dúvidas Frequentes</h2>
+            
+            <div style="display: grid; gap: 1rem;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        ⏱️ Quanto tempo leva para ver resultados?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>A maioria das pessoas relata noticiar mudanças na concentração e na qualidade do sono em <strong>3-7 dias</strong>. Os resultados mais profundos aparecem após <strong>21-30 dias</strong> de prática consistente dos neurotruques.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        👥 É realmente apenas para mulheres?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>O manual é <strong>otimizado para mulheres</strong>, considerando o ciclo hormonal e diferenças neurofisiológicas. Homens também podem se beneficiar, mas o conteúdo foi desenvolvido especificamente para o cérebro feminino.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        💼 Posso usar em contextos profissionais?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>Com certeza! Os neurotruques são perfeitamente <strong>aplicáveis em reuniões, apresentações, gestão de tarefas</strong> e qualquer contexto que exija foco e controle emocional. Muitas profissionais já os usam no dia a dia.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <button class="faq-toggle" style="width: 100%; padding: 1.5rem; background: #f9f9f9; border: none; cursor: pointer; text-align: left; font-weight: 600; color: #051D2E; font-size: 1rem;">
+                        🔄 Tem garantia de reembolso?
+                    </button>
+                    <div class="faq-content" style="display: none; padding: 1.5rem; background: white; color: #666;">
+                        <p>Sim! Se em <strong>7 dias</strong> você não se sentir satisfeita, devolvemos 100% do seu dinheiro, sem perguntas. A satisfação é a nossa prioridade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'SEU_PIXEL_ID'); // Substituir SEU_PIXEL_ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-XXXXXXXXXX'); // Substituir XXXXXXXXXX por seu Google Ads ID
+    </script>
+
     <!-- FOOTER -->
     <footer style="text-align: center; padding: 2rem 1rem; background: #051D2E; color: #A68B5B; font-size: 0.9rem;">
         <p>Hoje melhor que Ontem</p>
         <p style="margin-top: 1rem; font-size: 0.8rem; color: #666;">© 2026 M.C. Mendes. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- STICKY CTA BUTTON -->
+    <button class="sticky-cta" id="stickyCta" onclick="window.open('https://a.co/d/0aTfUKs4', '_blank')">
+        💎 COMPRAR AGORA - R$ 1,99
+    </button>
+
+
+    <script>
+        // Sticky CTA - Mostrar após scroll
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.getElementById('stickyCta');
+            if (window.scrollY > 500) {
+                stickyCta.classList.add('show');
+            } else {
+                stickyCta.classList.remove('show');
+            }
+        });
+
+        // Sticky CTA tracking
+        document.getElementById('stickyCta').addEventListener('click', function() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {value: 1.99, currency: 'BRL'});
+            }
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'allow_custom_scripts': true,
+                    'value': 1.99,
+                    'currency': 'BRL'
+                });
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const isOpen = content.style.display !== 'none';
+                
+                // Fechar todos os outros
+                document.querySelectorAll('.faq-content').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('.faq-toggle').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Abrir o atual
+                if (!isOpen) {
+                    content.style.display = 'block';
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Countdown Timer (opcional - ajuste a data conforme necessário)
+        function updateCountdown() {
+            const launchEnd = new Date('2026-08-05T23:59:59').getTime();
+            const now = new Date().getTime();
+            const distance = launchEnd - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                console.log('Tempo restante: ' + days + 'd ' + hours + 'h');
+            }
+        }
+        updateCountdown();
+    </script>
+
 </body>
 </html>
